@@ -20,7 +20,7 @@
 
     <div class="con">
         <audio id="bgmp3" loop>
-            <source src="./song1.mp3" type="audio/mpeg">
+            <source src="static/song1.mp3" type="audio/mpeg">
         </audio>
 
         <div class="v" style="background: #90ee91;">Song 1</div>
@@ -42,14 +42,14 @@
 
         function play1() {
             var audio = document.getElementById('bgmp3');
-            audio.src = './song1.mp3'
+            audio.src = 'static/song1.mp3'
             audio.currentTime = 0;
             audio.play();
         }
 
         function play2() {
             var audio = document.getElementById('bgmp3');
-            audio.src = './song2.mp3'
+            audio.src = 'static/song2.mp3'
             audio.currentTime = 0;
             audio.play();
         }
