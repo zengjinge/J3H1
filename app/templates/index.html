@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .v {
+            margin: 0 auto;
+            width: 400px;
+            display: flex;
+            justify-content: space-evenly;
+            margin: 5px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="con">
+        <audio id="bgmp3" loop>
+            <source src="./song1.mp3" type="audio/mpeg">
+        </audio>
+
+        <div class="v" style="background: #90ee91;">Song 1</div>
+        <div class="v">
+            <div class="l">Click and Play 1</div>
+
+            <button onclick="play1()">Play Audio</button>
+        </div>
+        <div class="v" style="background: #ffff11;">Song 2</div>
+        <div class="v">
+            <div class="l">Click and Play 1</div>
+            <button onclick="play2()">Play Audio</button>
+        </div>
+
+    </div>
+
+    <script>
+
+
+        function play1() {
+            var audio = document.getElementById('bgmp3');
+            audio.src = './song1.mp3'
+            audio.currentTime = 0;
+            audio.play();
+        }
+
+        function play2() {
+            var audio = document.getElementById('bgmp3');
+            audio.src = './song2.mp3'
+            audio.currentTime = 0;
+            audio.play();
+        }
+
+        function zanting() {
+            document.getElementById("bgmp3").pause();
+        }
+
+    </script>
+</body>
+
+</html>
